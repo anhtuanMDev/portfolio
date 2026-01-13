@@ -1,8 +1,0 @@
-{
-  "/": "pages/index.js",
-  "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js",
-  "/projects/clima_weather": "pages/projects/clima_weather.js",
-  "/projects/stellar_scope": "pages/projects/stellar_scope.js"
-}
