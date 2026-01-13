@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -214,7 +213,7 @@ export default function StellarScope() {
                       with clear explanations. By focusing on readability,
                       smooth browsing, and everyday language, StellarScope makes
                       learning about space accessible to everyone - whether
-                      you’re casually curious or deeply interested in the
+                      you&apos;re casually curious or deeply interested in the
                       universe.
                     </p>
                   </div>
@@ -228,7 +227,7 @@ export default function StellarScope() {
                       stay informed about rocket launches, asteroids near Earth,
                       and space missions from around the world. Browse beautiful
                       space photos, read clear explanations, and discover the
-                      stories behind each event. See what's happening above our
+                      stories behind each event. See what&aposs; happening above our
                       planet, from natural events observed from space to solar
                       activity that can affect Earth. Search for topics you care
                       about, save your favorite content, and share exciting
