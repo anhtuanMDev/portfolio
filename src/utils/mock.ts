@@ -40,7 +40,6 @@ export const projects: ProjectInfo[] = [
       "StellarScope is a simple app that helps you explore space events, space news, and stunning images from NASA in one place.",
     image: "/images/stellar-scope.png",
     techStack: ["React Native", "TypeScript", "TanStack", "Zustand", "MMKV"],
-    // link: 'https://play.google.com/store/apps/details?id=com.stellarscope',
     link: "/projects/stellar_scope",
   },
 ];

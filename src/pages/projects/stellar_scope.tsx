@@ -1,240 +1,402 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Separator } from "@radix-ui/react-separator";
 import Image from "next/image";
 import Link from "next/link";
+
+const technologies = [
+  {
+    name: "React Native",
+    logo: "https://cdn.simpleicons.org/react",
+  },
+  {
+    name: "TypeScript",
+    logo: "https://cdn.simpleicons.org/typescript",
+  },
+  {
+    name: "JavaScript",
+    logo: "https://cdn.simpleicons.org/javascript",
+  },
+  {
+    name: "Android",
+    logo: "https://cdn.simpleicons.org/android",
+  },
+  {
+    name: "iOS",
+    logo: "https://cdn.simpleicons.org/apple",
+  },
+  {
+    name: "React Navigation",
+    logo: "https://cdn.simpleicons.org/react",
+  },
+  {
+    name: "Zustand",
+    logo: "https://cdn.simpleicons.org/react",
+  },
+  {
+    name: "React Query",
+    logo: "https://cdn.simpleicons.org/reactquery",
+  },
+  {
+    name: "Axios",
+    logo: "https://cdn.simpleicons.org/axios",
+  },
+  {
+    name: "Firebase",
+    logo: "https://cdn.simpleicons.org/firebase",
+  },
+  {
+    name: "MMKV Storage",
+    logo: "https://cdn.simpleicons.org/android",
+  },
+  {
+    name: "NASA Open APIs",
+    logo: "https://cdn.simpleicons.org/nasa",
+  },
+  {
+    name: "The Space Dev API",
+    logo: "/images/the-space-dev-logo.png",
+  },
+];
+
+const uiTechnologies = [
+  {
+    name: "Reanimated",
+    logo: "https://swmansion.com/assets/logo.svg",
+  },
+  {
+    name: "Skia",
+    logo: "https://cdn.simpleicons.org/shopify",
+  },
+  {
+    name: "FlashList",
+    logo: "https://cdn.simpleicons.org/shopify",
+  },
+  {
+    name: "FastImage",
+    logo: "https://cdn.simpleicons.org/react",
+  },
+  {
+    name: "Unistyles",
+    logo: "https://www.unistyl.es/unicorn.svg",
+  },
+];
+
+const tooling = [
+  {
+    name: "Jest",
+    logo: "https://cdn.simpleicons.org/jest",
+  },
+  {
+    name: "ESLint",
+    logo: "https://cdn.simpleicons.org/eslint",
+  },
+  {
+    name: "Prettier",
+    logo: "https://cdn.simpleicons.org/prettier",
+  },
+  {
+    name: "Sentry",
+    logo: "https://cdn.simpleicons.org/sentry",
+  },
+];
+
+const keyFeatures = [
+  "Real-time space updates",
+  "NASA image browsing",
+  "Asteroid tracking",
+  "Earth events",
+  "Personalized settings",
+];
 
 export default function StellarScope() {
   return (
     <div className="min-h-screen">
-      {/* Breadcrumb */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <nav className="flex" aria-label="Breadcrumb">
-            <ol className="inline-flex items-center space-x-1 md:space-x-3">
-              <li className="inline-flex items-center">
-                <Link
-                  href="/"
-                  className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600"
+      <main className="px-4 md:px-10 lg:px-20 flex flex-1 justify-center py-10">
+        <div className="flex flex-col w-full max-w-[960px] flex-1">
+          {/* Breadcrumbs */}
+          <div className="flex flex-wrap gap-2 px-4 pb-8">
+            <Link
+              href="#"
+              className="text-muted-foreground text-sm font-medium leading-normal hover:text-primary"
+            >
+              Projects
+            </Link>
+            <span className="text-muted-foreground text-sm font-medium leading-normal">
+              /
+            </span>
+            <span className="text-foreground text-sm font-medium leading-normal">
+              Stellar Scope
+            </span>
+          </div>
+
+          {/* Profile Header */}
+          <div className="flex p-4 mb-8">
+            <div className="flex w-full flex-col gap-7 sm:flex-row sm:justify-between sm:items-center">
+              <div className="flex gap-5 items-center">
+                <div
+                  className="bg-center bg-no-repeat aspect-square bg-cover rounded-xl size-24 shrink-0"
+                  style={{
+                    backgroundImage: 'url("/images/stellar-scope-logo.png")',
+                  }}
+                  role="img"
+                  aria-label="Minimalist cloud and sun app icon"
+                />
+                <div className="flex flex-col">
+                  <h1 className="text-foreground text-2xl font-bold leading-tight tracking-[-0.015em]">
+                    Stellar Scope - Explore Space Every Day
+                  </h1>
+                  <p className="text-muted-foreground text-base font-normal leading-normal mt-1">
+                    A simple app that helps you explore space events, space
+                    news, and stunning images from NASA in one place.
+                  </p>
+                </div>
+              </div>
+              <div className="flex w-full flex-col gap-3 sm:flex-row sm:w-auto shrink-0">
+                <Button
+                  variant="secondary"
+                  className="flex-1 sm:flex-auto hidden md:inline opacity-0"
                 >
-                  Home
+                  View on CH Play
+                </Button>
+                <Link
+                  href={
+                    "https://play.google.com/store/apps/details?id=com.stellarscope"
+                  }
+                >
+                  <Button className="flex-1 sm:flex-auto bg-blue-500">
+                    View on CH Play
+                  </Button>
                 </Link>
-              </li>
-              <li>
-                <div className="flex items-center">
-                  <svg
-                    className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 6 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="m1 9 4-4-4-4"
-                    />
-                  </svg>
-                  <Link
-                    href="/projects"
-                    className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2"
-                  >
-                    Projects
-                  </Link>
-                </div>
-              </li>
-              <li aria-current="page">
-                <div className="flex items-center">
-                  <svg
-                    className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 6 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="m1 9 4-4-4-4"
-                    />
-                  </svg>
-                  <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2">
-                    StellarScope
-                  </span>
-                </div>
-              </li>
-            </ol>
-          </nav>
-        </div>
-      </section>
-
-      {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            StellarScope – Explore Space Every Day
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Explore space with one of the most complete space discovery apps available. StellarScope makes it easy and enjoyable to follow real space events, view stunning NASA images, and learn what&apos;s happening beyond Earth.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Badge variant="secondary" className="bg-blue-100 text-blue-800">
-              React Native
-            </Badge>
-            <Badge variant="secondary" className="bg-blue-100 text-blue-800">
-              NASA API
-            </Badge>
-            <Badge variant="secondary" className="bg-blue-100 text-blue-800">
-              Mobile App
-            </Badge>
+              </div>
+            </div>
           </div>
-          <Button asChild className="bg-blue-600 hover:bg-blue-700">
-            <Link href="#projects">← Back to Projects</Link>
-          </Button>
-        </div>
-      </section>
 
-      {/* Description Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Discover the Universe
+          <Separator className="h-[2px] bg-gray-100 mb-8" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 px-4">
+            <div className="lg:col-span-2 flex flex-col gap-10">
+              {/* Project Overview Card */}
+              <Card className="border-0 shadow-none">
+                <CardHeader>
+                  <CardTitle>Project Overview</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div>
+                    <h3 className="font-bold text-foreground mb-2">
+                      The Problem
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Information about space is scattered across many websites
+                      and sources, often presented in a complex and technical
+                      way. Space events, rocket launches, and scientific updates
+                      can be difficult to follow, especially for people who are
+                      curious about space but not experts. Users often struggle
+                      to find reliable, up-to-date information in a format that
+                      is easy to understand and enjoyable to explore.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground mb-2">
+                      The Solution
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      StellarScope brings space information together in one
+                      simple, easy-to-use app. It presents real space events,
+                      launch updates, and NASA imagery in a clean, visual format
+                      with clear explanations. By focusing on readability,
+                      smooth browsing, and everyday language, StellarScope makes
+                      learning about space accessible to everyone - whether
+                      you’re casually curious or deeply interested in the
+                      universe.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-foreground">
+                      Objective: Discover the Universe
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      With short, easy-to-read updates, StellarScope helps you
+                      stay informed about rocket launches, asteroids near Earth,
+                      and space missions from around the world. Browse beautiful
+                      space photos, read clear explanations, and discover the
+                      stories behind each event. See what's happening above our
+                      planet, from natural events observed from space to solar
+                      activity that can affect Earth. Search for topics you care
+                      about, save your favorite content, and share exciting
+                      discoveries with friends. StellarScope runs smoothly even
+                      on slower connections and lets you customize the app with
+                      light or dark mode, your preferred date format, and
+                      measurement units.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Screenshots Card */}
+              <Card className="border-0 shadow-none">
+                <CardHeader>
+                  <CardTitle>Screenshots</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <Image
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6fskKA5qkFnu0dh2Su0B4HIqePnCv_usM1bnxKt_Uu1PL0egV_CfGfzj3wztNSVAk5-JhxbeD55vUokv5ya5KAyVnn5iZ2BsCPj-UYWEsxd7jtuEvZGpPJJW1_0F5WscZ5FlOzWCRO1iGCgarRoIV_MkMLcP1KxDEptz3xZG4MLy6IjbRW_nNudsKTtxzL2V5MPsCgw-IfFrQMfb_iP2l1OVKFkcFdPF_NFLcmS24mEagIv3umrzknmTATXm76TqKPQDQGbDUHlQ"
+                      alt="Mobile app screenshot showing hourly weather forecast"
+                      width={400}
+                      height={800}
+                      className="rounded-lg w-full object-cover aspect-[9/18] border"
+                    />
+                    <Image
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK7clRvh1pqu2ObPtamXyMo1gIeVOZEzTEapAU_mOyltkPeaspZSKFwJBXe4_rLWKIy-hjnpsMRz2PFGGQx3xaroHjpSFTUjHtZZsDDhBw8kQQANNT2eDtbVIyL-DbcyOkN72Qt3HjPZay7mJenhuqJmNZ0GXgKaKjW3s1jsAtdQcGtH5j9cC_OCGTdio2h1kfyN3cXTd40rmo6LJkBRatxWupAShFxcSaHqnK3B7OBeIz-ofwpSqob42QXwbWiCpC0-EFt6TxZgg"
+                      alt="Mobile app screenshot showing weekly weather forecast view"
+                      width={400}
+                      height={800}
+                      className="rounded-lg w-full object-cover aspect-[9/18] border"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="lg:col-span-1 flex flex-col">
+              {/* My Role Card */}
+              <Card className="border-0 shadow-none">
+                <CardHeader>
+                  <CardTitle className="text-lg">My Role</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Led front-end development and user experience design,
+                    integrating open data sources to present space information
+                    in a clear and engaging way.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Key Features Card */}
+              <Card className="border-0 shadow-none">
+                <CardHeader>
+                  <CardTitle className="text-lg">Key Features</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 list-disc list-inside text-muted-foreground">
+                    {keyFeatures.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Technologies Used Card */}
+              <Card className="border-0 shadow-none">
+                <CardHeader>
+                  <CardTitle className="text-lg">Technologies Used</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-3">
+                    {technologies.map((tech) => (
+                      <Badge
+                        key={tech.name}
+                        variant="secondary"
+                        className="flex items-center gap-2 px-3 py-1.5"
+                      >
+                        <Image
+                          src={tech.logo}
+                          alt={`${tech.name} logo`}
+                          width={20}
+                          height={20}
+                          className="w-5 h-5"
+                        />
+                        <span className="text-sm font-medium">{tech.name}</span>
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* UI Extendsion Used Card */}
+              <Card className="border-0 shadow-none">
+                <CardHeader>
+                  <CardTitle className="text-lg">UX/UI</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-3">
+                    {uiTechnologies.map((tech) => (
+                      <Badge
+                        key={tech.name}
+                        variant="secondary"
+                        className="flex items-center gap-2 px-3 py-1.5"
+                      >
+                        <Image
+                          src={tech.logo}
+                          alt={`${tech.name} logo`}
+                          width={20}
+                          height={20}
+                          className="w-5 h-5"
+                        />
+                        <span className="text-sm font-medium">{tech.name}</span>
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Tool Used Card */}
+              <Card className="border-0 shadow-none">
+                <CardHeader>
+                  <CardTitle className="text-lg">Tooling</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-3">
+                    {tooling.map((tech) => (
+                      <Badge
+                        key={tech.name}
+                        variant="secondary"
+                        className="flex items-center gap-2 px-3 py-1.5"
+                      >
+                        <Image
+                          src={tech.logo}
+                          alt={`${tech.name} logo`}
+                          width={20}
+                          height={20}
+                          className="w-5 h-5"
+                        />
+                        <span className="text-sm font-medium">{tech.name}</span>
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Ready to Explore Space?
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                With short, easy-to-read updates, StellarScope helps you stay informed about rocket launches, asteroids near Earth, and space missions from around the world. Browse beautiful space photos, read clear explanations, and discover the stories behind each event.
+              <p className="text-xl text-gray-600 mb-8">
+                Whether you&apos;re a space enthusiast, a student, or simply
+                curious about the universe, StellarScope makes learning about
+                space simple, visual, and engaging.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                See what&apos;s happening above our planet, from natural events observed from space to solar activity that can affect Earth. Search for topics you care about, save your favorite content, and share exciting discoveries with friends.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                StellarScope runs smoothly even on slower connections and lets you customize the app with light or dark mode, your preferred date format, and measurement units.
-              </p>
+              <Button asChild className="bg-blue-600 hover:bg-blue-700">
+                <Link href="/projects">View More Projects</Link>
+              </Button>
             </div>
-            <div className="relative">
-              <Image
-                src="/images/stellar_scope_placeholder.jpg"
-                alt="StellarScope App Screenshot"
-                width={400}
-                height={600}
-                className="rounded-lg shadow-lg object-cover"
-              />
-            </div>
-          </div>
+          </section>
         </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why StellarScope?
-            </h2>
-            <p className="text-xl text-gray-600">
-              Features that make space exploration accessible and engaging
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="p-6">
-              <CardHeader className="p-0 mb-4">
-                <CardTitle className="text-xl text-gray-900">Simple and Easy to Use</CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <CardDescription className="text-gray-600">
-                  Clear layouts and readable content help you explore space without feeling overwhelmed.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6">
-              <CardHeader className="p-0 mb-4">
-                <CardTitle className="text-xl text-gray-900">Learn Something New Every Day</CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <CardDescription className="text-gray-600">
-                  Daily space images, important events, and fresh updates keep your curiosity alive.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6">
-              <CardHeader className="p-0 mb-4">
-                <CardTitle className="text-xl text-gray-900">Follow Real Space Activity</CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <CardDescription className="text-gray-600">
-                  Stay up to date with rocket launches, space missions, and asteroids near Earth.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6">
-              <CardHeader className="p-0 mb-4">
-                <CardTitle className="text-xl text-gray-900">Beautiful Space Images</CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <CardDescription className="text-gray-600">
-                  Browse and search high-quality NASA images with helpful explanations.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6">
-              <CardHeader className="p-0 mb-4">
-                <CardTitle className="text-xl text-gray-900">Explore People and Organizations</CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <CardDescription className="text-gray-600">
-                  Learn about astronauts, their missions, and space agencies around the world.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6">
-              <CardHeader className="p-0 mb-4">
-                <CardTitle className="text-xl text-gray-900">Understand Space-Earth Connection</CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <CardDescription className="text-gray-600">
-                  View natural events seen from space and learn how space activity impacts our planet.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="p-6 md:col-span-2 lg:col-span-3">
-              <CardHeader className="p-0 mb-4">
-                <CardTitle className="text-xl text-gray-900">Make It Your Own</CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <CardDescription className="text-gray-600">
-                  Choose light or dark mode, date formats, and units that feel right for you.
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to Explore Space?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Whether you&apos;re a space enthusiast, a student, or simply curious about the universe, StellarScope makes learning about space simple, visual, and engaging.
-          </p>
-          <Button asChild className="bg-blue-600 hover:bg-blue-700">
-            <Link href="#projects">View More Projects</Link>
-          </Button>
-        </div>
-      </section>
+      </main>
     </div>
   );
 }

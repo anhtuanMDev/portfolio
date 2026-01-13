@@ -26,14 +26,23 @@
       "static/chunks/src_pages__error_5771e187._.js",
       "static/chunks/src_pages__error_208276be._.js"
     ],
-    "/projects/stellar_scope": [
+    "/projects/clima_weather": [
       "static/chunks/node_modules_next_e2783ff4._.js",
       "static/chunks/node_modules_react-dom_82bb97c6._.js",
       "static/chunks/node_modules_tailwind-merge_dist_bundle-mjs_mjs_e33d9f9e._.js",
       "static/chunks/node_modules_0ed9a27d._.js",
+      "static/chunks/[root-of-the-server]__52d0c7df._.js",
+      "static/chunks/src_pages_projects_clima_weather_tsx_5771e187._.js",
+      "static/chunks/src_pages_projects_clima_weather_tsx_48f2f9f5._.js"
+    ],
+    "/projects/stellar_scope": [
+      "static/chunks/node_modules_next_e2783ff4._.js",
+      "static/chunks/node_modules_react-dom_82bb97c6._.js",
+      "static/chunks/node_modules_tailwind-merge_dist_bundle-mjs_mjs_e33d9f9e._.js",
+      "static/chunks/node_modules_eadf1391._.js",
       "static/chunks/[root-of-the-server]__f6a2f675._.js",
       "static/chunks/src_pages_projects_stellar_scope_tsx_5771e187._.js",
-      "static/chunks/src_pages_projects_stellar_scope_tsx_7c4cfc8a._.js"
+      "static/chunks/src_pages_projects_stellar_scope_tsx_f172e8c0._.js"
     ]
   },
   "devFiles": [],
