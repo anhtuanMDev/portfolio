@@ -248,15 +248,15 @@ export default function StellarScope() {
                 <CardContent>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <Image
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6fskKA5qkFnu0dh2Su0B4HIqePnCv_usM1bnxKt_Uu1PL0egV_CfGfzj3wztNSVAk5-JhxbeD55vUokv5ya5KAyVnn5iZ2BsCPj-UYWEsxd7jtuEvZGpPJJW1_0F5WscZ5FlOzWCRO1iGCgarRoIV_MkMLcP1KxDEptz3xZG4MLy6IjbRW_nNudsKTtxzL2V5MPsCgw-IfFrQMfb_iP2l1OVKFkcFdPF_NFLcmS24mEagIv3umrzknmTATXm76TqKPQDQGbDUHlQ"
-                      alt="Mobile app screenshot showing hourly weather forecast"
+                      src="/images/stellar_scope/splash.png"
+                      alt="Mobile app splash screen screenshot of Stellar Scope"
                       width={400}
                       height={800}
                       className="rounded-lg w-full object-cover aspect-[9/18] border"
                     />
                     <Image
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK7clRvh1pqu2ObPtamXyMo1gIeVOZEzTEapAU_mOyltkPeaspZSKFwJBXe4_rLWKIy-hjnpsMRz2PFGGQx3xaroHjpSFTUjHtZZsDDhBw8kQQANNT2eDtbVIyL-DbcyOkN72Qt3HjPZay7mJenhuqJmNZ0GXgKaKjW3s1jsAtdQcGtH5j9cC_OCGTdio2h1kfyN3cXTd40rmo6LJkBRatxWupAShFxcSaHqnK3B7OBeIz-ofwpSqob42QXwbWiCpC0-EFt6TxZgg"
-                      alt="Mobile app screenshot showing weekly weather forecast view"
+                      src="/images/stellar_scope/home.png"
+                      alt="Mobile app screenshot showing news, galaxy image on Stellar Scope"
                       width={400}
                       height={800}
                       className="rounded-lg w-full object-cover aspect-[9/18] border"

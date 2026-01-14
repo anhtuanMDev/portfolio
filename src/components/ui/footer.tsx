@@ -25,7 +25,7 @@ export default function Footer() {
             <Linkedin className="w-6 h-6" />
           </Link>
         </div>
-        <p className="text-gray-400">© 2024 Alex Vin. All rights reserved.</p>
+        <p className="text-gray-400">© 2026 Alex Vin. All rights reserved.</p>
       </div>
     </footer>
   );
