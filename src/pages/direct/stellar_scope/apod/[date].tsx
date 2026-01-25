@@ -28,7 +28,7 @@ export default function ApodPage() {
                 } else if (isAndroid) {
                     window.location.href = 'https://play.google.com/store/apps/details?id=com.stellarscope';
                 }
-            }, 1000);
+            }, 5000);
         } else {
             // Desktop: show download page or QR code 
             //   router.push(`/download?article=${date}`);
