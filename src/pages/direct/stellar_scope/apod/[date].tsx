@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import { routes } from '../routes';
+import { routes } from '../../../../mocks/routes';
 
 export default function ApodPage() {
     const router = useRouter()
