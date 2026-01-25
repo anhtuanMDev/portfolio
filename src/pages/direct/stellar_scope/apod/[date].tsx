@@ -1,11 +1,9 @@
 'use client';
 
-import { useParams } from 'next/navigation';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
 export default function ApodPage() {
-  const params = useParams();
   const router = useRouter()
   const { date } = router.query
 
