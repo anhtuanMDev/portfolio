@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import { routes } from '../routes';
 
 export default function ApodPage() {
     const router = useRouter()
@@ -16,7 +17,7 @@ export default function ApodPage() {
 
         if (isMobile) {
             // Try to open the app with deep link
-            window.location.href = `stellar.scope://apod/${date}`;
+            window.location.href = `stellar.scope://${routes.detailApod}/${date}`;
 
             // Fallback: redirect to app store if app doesn't open
             setTimeout(() => {
@@ -39,7 +40,7 @@ export default function ApodPage() {
         <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-[#1F6BDB] via-[#9B7BFF] to-[#FFB703]">
             <div className="text-center text-white">
                 <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-white mx-auto mb-4"></div>
-                <p className="text-xl">Opening Stellar Scope...</p>
+                <p className="text-xl">Opening Stellar Scope {date}...</p>
             </div>
         </div>
     );
