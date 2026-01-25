@@ -16,7 +16,7 @@ export default function ApodPage() {
 
         if (isMobile) {
             // Try to open the app with deep link
-            window.location.href = `com.stellarscope://apod/${date}`;
+            window.location.href = `stellar.scope://apod/${date}`;
 
             // Fallback: redirect to app store if app doesn't open
             setTimeout(() => {
