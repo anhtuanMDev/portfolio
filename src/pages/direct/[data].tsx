@@ -1,6 +1,5 @@
 import { apps } from "@/utils/apps";
 import { buildDeepLink, validateParams } from "@/utils/deeplink";
-import { routes } from "@/utils/routes";
 import { Apple, Download } from "lucide-react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";

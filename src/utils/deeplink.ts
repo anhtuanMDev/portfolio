@@ -17,7 +17,7 @@ export function buildDeepLink(
     }
 
     // Add path segments for remaining params
-    Object.entries(otherParams).forEach(([key, value]) => {
+    Object.entries(otherParams).forEach(([, value]) => {
         if (value && typeof value === 'string') {
             deepLink += `/${value}`;
         }
@@ -42,7 +42,7 @@ export function buildDeepLinkStructured(
 
     // Build path segments from other params (e.g., /key1/value1/key2/value2)
     const pathSegments = Object.entries(otherParams)
-        .filter(([_, value]) => value && typeof value === 'string')
+        .filter(([, value]) => value && typeof value === 'string')
         .flatMap(([key, value]) => [key, value as string]);
 
     if (pathSegments.length > 0) {
@@ -68,7 +68,7 @@ export function buildDeepLinkWithQuery(
 
     // Add other params as query string
     const queryParams = Object.entries(otherParams)
-        .filter(([_, value]) => value && typeof value === 'string')
+        .filter(([, value]) => value && typeof value === 'string')
         .reduce((acc, [key, value]) => {
             acc[key] = value as string;
             return acc;
