@@ -66,7 +66,7 @@ export default function DirectDataPage() {
                                 alt={currentApp.name}
                                 width={64}
                                 height={64}
-                                className="w-16 h-16 object-contain"
+                                className="w-full h-full object-contain"
                             />
                         )}
                     </div>
