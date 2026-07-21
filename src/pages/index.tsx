@@ -187,19 +187,19 @@ export default function HomePage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
-                <Link key={index} href={project.link}>
+                <Link key={index} href={project.link} className="h-full block">
                   <Card
-                    className="overflow-hidden hover:shadow-lg transition-shadow py-0 pb-6"
+                    className="overflow-hidden hover:shadow-lg transition-shadow py-0 pb-6 h-full flex flex-col"
                   >
-                    <div className="aspect-video relative">
+                    <div className="aspect-video relative shrink-0">
                       <Image
-                        src={project.image || "/images/placeholder.svg"}
+                        src={project.images?.cover || "/images/placeholder.svg"}
                         alt={project.title}
                         fill
                         className="object-cover"
                       />
                     </div>
-                    <CardHeader>
+                    <CardHeader className="flex-1">
                       <CardTitle className="text-xl text-gray-900">
                         {project.title}
                       </CardTitle>
@@ -207,7 +207,7 @@ export default function HomePage() {
                         {project.description}
                       </CardDescription>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="mt-auto pt-0">
                       <div className="flex flex-wrap gap-2">
                         {project.techStack.map((tech, techIndex) => (
                           <Badge

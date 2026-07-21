@@ -35,18 +35,50 @@ export const testimonials: TestimonialsInfo[] = [
 
 export const projects: ProjectInfo[] = [
   {
-    title: "StellarScope",
+    id: 1,
+    title: "Space Mobile App",
+    status: "Live",
+    category: "React Native",
     description:
       "StellarScope is a simple app that helps you explore space events, space news, and stunning images from NASA in one place.",
-    image: "/images/stellar-scope.png",
+    images: {
+      cover: "/images/stellar_scope/cover.png",
+      logo: "/images/stellar-scope-logo.png",
+      gallery: [],
+    },
     techStack: ["React Native", "TypeScript", "TanStack", "Zustand", "MMKV"],
     link: "/projects/stellar_scope",
   },
   {
-    title: "Seshat",
+    id: 2,
+    title: "Gamer Dictionary App",
+    status: "In Dev",
+    category: "React Native",
+    description:
+      "Scalable game information look up, provide fast and accurate information",
+    images: {
+      cover: "https://lh3.googleusercontent.com/aida-public/AB6AXuC-N3iM8zc4z8rhHIX-dIvAPaDDJ6WbKRJn3KLtotn2rIt07Y_mf62hASoOjKEelJiZNbbnErbuOpsqA2dCFYv1NdXZyuOQmUU4IXBjYeo2qnPq3i2YK6KFchUYp7qo6iFDxATdbwb01Dn431_5Y4N4POqhsPr5L9HgvSnjvNnKxBqYtZe-1_Wg4IiXbDU_x22A8wNKyIWmD1Ozj0L0ICeA51DNK1WTSR71vwxeJING7fZNEMrNtz0BIbSNd4-mFSGs-heJHtU3P_0",
+      logo: "",
+      gallery: [],
+    },
+    techStack: ["React Native", "TypeScript", "Firebase"],
+    link: "#",
+  },
+  {
+    id: 3,
+    title: "Seshat Narrative Engine",
+    status: "In Dev",
+    category: "Web",
     description:
       "A sophisticated, local-first world-building tool and narrative engine designed for novelists, game designers, and world-builders.",
-    image: "/images/seshat/editor.png",
+    images: {
+      cover: "/images/seshat/editor.png",
+      logo: "/images/seshat-logo.png", // Missing?
+      gallery: [
+        "/images/seshat/editor.png",
+        "/images/seshat/knowledge-graph.png"
+      ],
+    },
     techStack: ["React 19", "TypeScript", "Vite", "Cloudflare", "Legend State"],
     link: "/projects/seshat",
   },

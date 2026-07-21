@@ -10,10 +10,19 @@ export type TestimonialsInfo = {
     rating: number,
 }
 
+export type ProjectImages = {
+    cover: string; // The main thumbnail for grids
+    logo?: string; // The app logo used in headers
+    gallery?: string[]; // Array of screenshots for the detail page
+};
+
 export type ProjectInfo = {
+    id: number,
     title: string,
+    status: string,
+    category: string,
     description: string,
-    image: string,
+    images: ProjectImages,
     techStack: string[],
     link: string,
 }

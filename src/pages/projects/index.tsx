@@ -13,38 +13,13 @@ import { ArrowRight, Info, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
-const projects = [
-  {
-    id: 1,
-    title: "Space Mobile App",
-    status: "Live",
-    description:
-      "StellarScope is a simple app that helps you explore space events, space news, and stunning images from NASA in one place.",
-    image: "/images/stellar_scope/cover.png",
-    tags: ["React Native", "TypeScript"],
-    link: "projects/stellar_scope/",
-    category: "React Native",
-  },
-
-  {
-    id: 2,
-    title: "Gamer Dictionary App",
-    status: "In Dev",
-    description:
-      "Scalable game information look up, provide fast and accurate information",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuC-N3iM8zc4z8rhHIX-dIvAPaDDJ6WbKRJn3KLtotn2rIt07Y_mf62hASoOjKEelJiZNbbnErbuOpsqA2dCFYv1NdXZyuOQmUU4IXBjYeo2qnPq3i2YK6KFchUYp7qo6iFDxATdbwb01Dn431_5Y4N4POqhsPr5L9HgvSnjvNnKxBqYtZe-1_Wg4IiXbDU_x22A8wNKyIWmD1Ozj0L0ICeA51DNK1WTSR71vwxeJING7fZNEMrNtz0BIbSNd4-mFSGs-heJHtU3P_0",
-    tags: ["React Native", "TypeScript", "Firebase"],
-    category: "React Native",
-  },
-];
+import { projects } from "@/utils/mock";
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("All Work");
   const [activeStatus, setActiveStatus] = useState("Published");
 
-  const filters = ["All Work", "iOS", "Android", "React Native"];
+  const filters = ["All Work", "Web", "iOS", "Android", "React Native"];
 
   const filteredProjects = projects.filter((project) => {
     const matchesFilter =
@@ -123,7 +98,7 @@ export default function Projects() {
               <Card className="group overflow-hidden hover:border-blue-500/50 transition-all flex flex-col h-full pt-0">
                 <div className="aspect-video relative overflow-hidden">
                   <Image
-                    src={project.image}
+                    src={project.images?.cover || "/images/placeholder.svg"}
                     alt={project.title}
                     fill
                     className="object-cover"
@@ -153,9 +128,9 @@ export default function Projects() {
                 </CardHeader>
                 <CardContent className="mt-auto flex flex-col gap-4">
                   <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-xs">
-                        {tag}
+                    {project.techStack.map((tech) => (
+                      <Badge key={tech} variant="secondary" className="text-xs">
+                        {tech}
                       </Badge>
                     ))}
                   </div>
