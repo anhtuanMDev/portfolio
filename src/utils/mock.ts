@@ -42,4 +42,12 @@ export const projects: ProjectInfo[] = [
     techStack: ["React Native", "TypeScript", "TanStack", "Zustand", "MMKV"],
     link: "/projects/stellar_scope",
   },
+  {
+    title: "Seshat",
+    description:
+      "A sophisticated, local-first world-building tool and narrative engine designed for novelists, game designers, and world-builders.",
+    image: "/images/seshat/editor.png",
+    techStack: ["React 19", "TypeScript", "Vite", "Cloudflare", "Legend State"],
+    link: "/projects/seshat",
+  },
 ];
