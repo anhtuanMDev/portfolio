@@ -9,6 +9,8 @@ import {
 import { Separator } from "@radix-ui/react-separator";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const technologies = [
   {
@@ -116,6 +118,18 @@ const keyFeatures = [
 ];
 
 export default function StellarScope() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 300;
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen">
       <main className="px-4 md:px-10 lg:px-20 flex flex-1 justify-center py-10">
@@ -241,12 +255,23 @@ export default function StellarScope() {
               </Card>
 
               {/* Screenshots Card */}
-              <Card className="border-0 shadow-none">
-                <CardHeader className="px-0">
+              <Card className="border-0 shadow-none relative">
+                <CardHeader className="px-0 flex flex-row items-center justify-between">
                   <CardTitle>Screenshots</CardTitle>
+                  <div className="flex gap-2">
+                    <Button variant="outline" size="icon" onClick={() => scroll('left')} className="rounded-full h-8 w-8">
+                      <ChevronLeft className="h-4 w-4" />
+                    </Button>
+                    <Button variant="outline" size="icon" onClick={() => scroll('right')} className="rounded-full h-8 w-8">
+                      <ChevronRight className="h-4 w-4" />
+                    </Button>
+                  </div>
                 </CardHeader>
                 <CardContent className="px-0">
-                  <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-6 pt-2 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
+                  <div 
+                    ref={scrollRef}
+                    className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-6 pt-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-4 px-4 md:mx-0 md:px-0"
+                  >
                     {[
                       "splash.png",
                       "home.png",
