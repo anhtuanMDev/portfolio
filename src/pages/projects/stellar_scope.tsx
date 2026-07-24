@@ -247,20 +247,20 @@ export default function StellarScope() {
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <Image
-                      src="/images/stellar_scope/splash.png"
-                      alt="Mobile app splash screen screenshot of Stellar Scope"
-                      width={400}
-                      height={800}
-                      className="rounded-lg w-full object-cover aspect-[9/18] border"
-                    />
-                    <Image
-                      src="/images/stellar_scope/home.png"
-                      alt="Mobile app screenshot showing news, galaxy image on Stellar Scope"
-                      width={400}
-                      height={800}
-                      className="rounded-lg w-full object-cover aspect-[9/18] border"
-                    />
+                    {[
+                      "splash.png",
+                      "home.png",
+                      ...Array.from({ length: 14 }).map((_, i) => `screenshot_${i + 1}.png`)
+                    ].map((img, index) => (
+                      <Image
+                        key={index}
+                        src={`/images/stellar_scope/${img}`}
+                        alt={`Stellar Scope screenshot ${index + 1}`}
+                        width={400}
+                        height={800}
+                        className="rounded-lg w-full object-cover aspect-[9/18] border"
+                      />
+                    ))}
                   </div>
                 </CardContent>
               </Card>
