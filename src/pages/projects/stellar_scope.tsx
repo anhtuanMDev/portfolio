@@ -242,24 +242,28 @@ export default function StellarScope() {
 
               {/* Screenshots Card */}
               <Card className="border-0 shadow-none">
-                <CardHeader>
+                <CardHeader className="px-0">
                   <CardTitle>Screenshots</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <CardContent className="px-0">
+                  <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-6 pt-2 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
                     {[
                       "splash.png",
                       "home.png",
                       ...Array.from({ length: 14 }).map((_, i) => `screenshot_${i + 1}.png`)
                     ].map((img, index) => (
-                      <Image
-                        key={index}
-                        src={`/images/stellar_scope/${img}`}
-                        alt={`Stellar Scope screenshot ${index + 1}`}
-                        width={400}
-                        height={800}
-                        className="rounded-lg w-full object-cover aspect-[9/18] border"
-                      />
+                      <div 
+                        key={index} 
+                        className="snap-center shrink-0 w-[240px] md:w-[280px] transition-transform duration-300 hover:scale-[1.02] hover:-translate-y-1"
+                      >
+                        <Image
+                          src={`/images/stellar_scope/${img}`}
+                          alt={`Stellar Scope screenshot ${index + 1}`}
+                          width={400}
+                          height={800}
+                          className="rounded-2xl w-full object-cover aspect-[9/18] border shadow-md"
+                        />
+                      </div>
                     ))}
                   </div>
                 </CardContent>
