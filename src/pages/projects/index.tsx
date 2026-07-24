@@ -59,7 +59,7 @@ export default function Projects() {
                 key={filter}
                 variant={activeFilter === filter ? "default" : "outline"}
                 className={
-                  activeFilter === filter ? "bg-blue-500 hover:bg-blue-600" : ""
+                  activeFilter === filter ? "" : ""
                 }
                 onClick={() => setActiveFilter(filter)}
               >
@@ -95,8 +95,8 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <Link key={project.id} href={project.link ? project.link : "#"}>
-              <Card className="group overflow-hidden hover:border-blue-500/50 transition-all flex flex-col h-full pt-0">
-                <div className="aspect-video relative overflow-hidden">
+              <Card className="group overflow-hidden hover:border-primary/50 transition-all flex flex-col h-full pt-0">
+                <div className="aspect-video relative overflow-hidden bg-muted">
                   <Image
                     src={project.images?.cover || "/images/placeholder.svg"}
                     alt={project.title}
@@ -106,7 +106,7 @@ export default function Projects() {
                 </div>
                 <CardHeader>
                   <div className="flex justify-between items-start mb-2">
-                    <CardTitle className="text-xl group-hover:text-blue-500 transition-colors">
+                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
                       {project.title}
                     </CardTitle>
                     <Badge
@@ -116,7 +116,7 @@ export default function Projects() {
                       className={
                         project.status === "Live"
                           ? "bg-green-100 text-green-700 hover:bg-green-100 dark:bg-green-900/30 dark:text-green-400"
-                          : "bg-blue-100 text-blue-700 hover:bg-blue-100 dark:bg-blue-900/30 dark:text-blue-400"
+                          : "bg-primary/10 text-primary hover:bg-primary/10 dark:bg-primary/20 dark:text-primary"
                       }
                     >
                       {project.status}
@@ -135,7 +135,7 @@ export default function Projects() {
                     ))}
                   </div>
                   <Button
-                    className="w-full bg-muted hover:bg-blue-500 hover:text-white text-blue-500 dark:text-blue-400 transition-all"
+                    className="w-full transition-all"
                     variant="secondary"
                   >
                     Case Study <ArrowRight className="ml-2" size={16} />
@@ -147,7 +147,7 @@ export default function Projects() {
         </div>
 
         {/* CTA Section */}
-        <Card className="mt-24 bg-blue-500/10 border-blue-500/20">
+        <Card className="mt-24 bg-primary/5 border-primary/20">
           <CardContent className="p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-black mb-6">
               Ready to build your next mobile solution?
@@ -159,7 +159,7 @@ export default function Projects() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href={"/#contact"}>
-                <Button className="bg-blue-500 hover:bg-blue-600 px-8 py-6 text-base">
+                <Button size="lg" className="rounded-full px-8 py-6 text-base shadow-lg">
                   Get In Touch <Mail className="ml-2" size={18} />
                 </Button>
               </Link>

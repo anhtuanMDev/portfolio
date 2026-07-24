@@ -20,7 +20,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/#home" onClick={closeMobileMenu}>
-            <div className="font-bold text-xl text-blue-600 cursor-pointer transition-transform hover:scale-105">
+            <div className="font-bold text-2xl text-primary cursor-pointer transition-transform hover:scale-105">
               Alex Portfolio
             </div>
           </Link>
@@ -29,22 +29,22 @@ export default function Header() {
           <div className="hidden md:flex space-x-8 items-center">
             <Link
               href="/#home"
-              className={`font-medium transition-colors duration-200 ${
-                pathname === "/" ? "text-blue-600" : "text-gray-600 hover:text-blue-600"
+              className={`font-medium text-base transition-colors duration-200 ${
+                pathname === "/" ? "text-primary" : "text-muted-foreground hover:text-primary"
               }`}
             >
               Home
             </Link>
             <Link
               href="/projects"
-              className={`font-medium transition-colors duration-200 ${
-                pathname === "/projects" ? "text-blue-600" : "text-gray-600 hover:text-blue-600"
+              className={`font-medium text-base transition-colors duration-200 ${
+                pathname === "/projects" ? "text-primary" : "text-muted-foreground hover:text-primary"
               }`}
             >
               Projects
             </Link>
-            <Link href="/#contact" className="text-gray-600 font-medium">
-              <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-blue-500 text-slate-50 text-sm font-bold tracking-[0.015em] hover:bg-blue-600 transition-all duration-200 hover:shadow-lg hover:scale-105">
+            <Link href="/#contact" className="font-medium">
+              <button className="flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-primary text-primary-foreground text-base font-medium tracking-[0.015em] transition-all duration-200 hover:opacity-90 hover:shadow-lg active:scale-95">
                 <p>Contact</p>
               </button>
             </Link>
@@ -53,7 +53,7 @@ export default function Header() {
           {/* Mobile Hamburger Button */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-500"
+            className="md:hidden p-2 rounded-md text-muted-foreground hover:text-primary hover:bg-muted focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-200"
             aria-label="Toggle menu"
           >
             <div className="relative w-6 h-6">
@@ -88,10 +88,10 @@ export default function Header() {
               <Link
                 href="/#home"
                 onClick={closeMobileMenu}
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-200 transform hover:translate-x-1 ${
+                className={`block px-3 py-2 rounded-md text-lg font-medium transition-all duration-200 transform hover:translate-x-1 ${
                   pathname === "/"
-                    ? "text-blue-600 bg-blue-50"
-                    : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-primary hover:bg-muted"
                 }`}
               >
                 Home
@@ -99,10 +99,10 @@ export default function Header() {
               <Link
                 href="/projects"
                 onClick={closeMobileMenu}
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-200 transform hover:translate-x-1 ${
+                className={`block px-3 py-2 rounded-md text-lg font-medium transition-all duration-200 transform hover:translate-x-1 ${
                   pathname === "/projects"
-                    ? "text-blue-600 bg-blue-50"
-                    : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                    ? "text-primary bg-primary/10"
+                    : "text-muted-foreground hover:text-primary hover:bg-muted"
                 }`}
               >
                 Projects
@@ -112,7 +112,7 @@ export default function Header() {
                 onClick={closeMobileMenu}
                 className="block px-3 py-2"
               >
-                <button className="w-full flex items-center justify-center rounded-lg h-10 px-4 bg-blue-500 text-slate-50 text-sm font-bold tracking-[0.015em] hover:bg-blue-600 transition-all duration-200 hover:shadow-lg transform hover:scale-[1.02]">
+                <button className="w-full flex items-center justify-center rounded-full h-10 px-4 bg-primary text-primary-foreground text-base font-medium tracking-[0.015em] transition-all duration-200 hover:opacity-90 hover:shadow-lg transform active:scale-95">
                   Contact
                 </button>
               </Link>

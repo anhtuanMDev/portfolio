@@ -60,31 +60,31 @@ export default function HomePage() {
   return (
     <>
       <title>Alex Vin Portfolio</title>
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-background">
         {/* Hero */}
-        <section id="home" className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto text-center">
-            <Image
-              src="/images/avatar.jpg"
-              alt="avatar"
-              width={150}
-              height={150}
-              className="rounded-full size-[150px] object-cover mx-auto mb-6 border-4 border-blue-100 overflow-hidden"
-            />
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-              Hi, I&#39;m <span className="text-blue-600">Alex Vin</span>
+        <section id="home" className="py-32 px-4 sm:px-6 lg:px-8 flex flex-col justify-center min-h-[80vh]">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="relative inline-block mb-8">
+              <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full" />
+              <Image
+                src="/images/avatar.jpg"
+                alt="avatar"
+                width={160}
+                height={160}
+                className="relative rounded-full size-[160px] object-cover mx-auto border-4 border-background ring-1 ring-border/50"
+              />
+            </div>
+            <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-foreground mb-6">
+              Hi, I&#39;m <span className="text-primary">Alex Vin</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Mobile Developer passionate about creating beautiful, functional
-              apps that solve real-world problems. With 2+ years of experience
-              in React Native, I bring ideas to life on iOS and Android
-              platforms.
+            <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
+              Mobile Developer passionate about creating beautiful, functional apps that solve real-world problems on iOS and Android.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild className="bg-blue-600 hover:bg-blue-700">
+              <Button asChild size="lg" className="rounded-full px-8 text-base">
                 <Link href="#contact">Get In Touch</Link>
               </Button>
-              <Button variant="outline" asChild>
+              <Button variant="outline" size="lg" asChild className="rounded-full px-8 text-base">
                 <Link href="#projects">View Projects</Link>
               </Button>
             </div>
@@ -92,82 +92,62 @@ export default function HomePage() {
         </section>
 
         {/* Expertise */}
-        <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section id="expertise" className="py-24 px-4 sm:px-6 lg:px-8 bg-zinc-50 dark:bg-zinc-900/30">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
                 My Skills & Expertise
               </h2>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-                A brief overview of my technical capabilities and the tools I
-                use to bring ideas to life.
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                A brief overview of my technical capabilities and the tools I use to bring ideas to life.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow p-6">
-                <CardTitle className="text-xl text-gray-900">
-                  Core Technologies
-                </CardTitle>
-
-                <CardContent>
-                  <CardDescription className="text-gray-600 leading-relaxed flex items-center">
-                    <Smartphone className="mr-2 h-4 w-4" />
-                    React Native
-                  </CardDescription>
-                  <CardDescription className="text-gray-600 leading-relaxed flex items-center">
-                    <Smartphone className="mr-2 h-4 w-4" />
-                    Android Development (Kotlin)
-                  </CardDescription>
-                  <CardDescription className="text-gray-600 leading-relaxed flex items-center">
-                    <Code className="mr-2 h-4 w-4" />
-                    JavaScript & TypeScript
-                  </CardDescription>
-                  <CardDescription className="text-gray-600 leading-relaxed flex items-center">
-                    <Code className="mr-2 h-4 w-4" />
-                    HTML5 & CSS3
-                  </CardDescription>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="md:col-span-2 p-8 bg-card border-border hover:border-primary/50 transition-colors">
+                <CardTitle className="text-2xl mb-6">Core Technologies</CardTitle>
+                <CardContent className="p-0 grid sm:grid-cols-2 gap-4">
+                  <div className="flex items-center text-muted-foreground">
+                    <Smartphone className="mr-3 h-5 w-5 text-primary" /> React Native
+                  </div>
+                  <div className="flex items-center text-muted-foreground">
+                    <Smartphone className="mr-3 h-5 w-5 text-primary" /> Android (Kotlin)
+                  </div>
+                  <div className="flex items-center text-muted-foreground">
+                    <Code className="mr-3 h-5 w-5 text-primary" /> TypeScript
+                  </div>
+                  <div className="flex items-center text-muted-foreground">
+                    <Code className="mr-3 h-5 w-5 text-primary" /> HTML5 & CSS3
+                  </div>
                 </CardContent>
               </Card>
 
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow p-6">
-                <CardTitle className="text-xl text-gray-900">
-                  Frameworks & Libraries
-                </CardTitle>
-
-                <CardContent>
-                  <CardDescription className="text-gray-600 leading-relaxed flex items-center">
-                    <Store className="mr-2 h-4 w-4" />
-                    Redux & Zustand
-                  </CardDescription>
-                  <CardDescription className="text-gray-600 leading-relaxed flex items-center">
-                    <Server className="mr-2 h-4 w-4" />
-                    NodeJS & Express
-                  </CardDescription>
+              <Card className="p-8 bg-card border-border hover:border-primary/50 transition-colors">
+                <CardTitle className="text-2xl mb-6">Frameworks</CardTitle>
+                <CardContent className="p-0 space-y-4">
+                  <div className="flex items-center text-muted-foreground">
+                    <Store className="mr-3 h-5 w-5 text-primary" /> Redux & Zustand
+                  </div>
+                  <div className="flex items-center text-muted-foreground">
+                    <Server className="mr-3 h-5 w-5 text-primary" /> NodeJS & Express
+                  </div>
                 </CardContent>
               </Card>
 
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow p-6">
-                <CardTitle className="text-xl text-gray-900">
-                  Tools & Platforms
-                </CardTitle>
-
-                <CardContent>
-                  <CardDescription className="text-gray-600 leading-relaxed flex items-center">
-                    <Github className="mr-2 h-4 w-4" />
-                    Git & Github
-                  </CardDescription>
-                  <CardDescription className="text-gray-600 leading-relaxed flex items-center">
-                    <Database className="mr-2 h-4 w-4" />
-                    Firebase
-                  </CardDescription>
-                  <CardDescription className="text-gray-600 leading-relaxed flex items-center">
-                    <Smartphone className="mr-2 h-4 w-4" />
-                    Android Studio
-                  </CardDescription>
-                  <CardDescription className="text-gray-600 leading-relaxed flex items-center">
-                    <Palette className="mr-2 h-4 w-4" />
-                    Figma
-                  </CardDescription>
+              <Card className="md:col-span-3 p-8 bg-card border-border hover:border-primary/50 transition-colors">
+                <CardTitle className="text-2xl mb-6">Tools & Platforms</CardTitle>
+                <CardContent className="p-0 flex flex-wrap gap-6">
+                  <div className="flex items-center text-muted-foreground">
+                    <Github className="mr-3 h-5 w-5 text-primary" /> Git & Github
+                  </div>
+                  <div className="flex items-center text-muted-foreground">
+                    <Database className="mr-3 h-5 w-5 text-primary" /> Firebase
+                  </div>
+                  <div className="flex items-center text-muted-foreground">
+                    <Smartphone className="mr-3 h-5 w-5 text-primary" /> Android Studio
+                  </div>
+                  <div className="flex items-center text-muted-foreground">
+                    <Palette className="mr-3 h-5 w-5 text-primary" /> Figma
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -175,51 +155,52 @@ export default function HomePage() {
         </section>
 
         {/* Projects */}
-        <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+        <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
                 Featured Projects
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-lg text-muted-foreground">
                 Some of my recent work that I&#39;m improving
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {projects.map((project, index) => (
-                <Link key={index} href={project.link} className="h-full block">
+                <Link key={index} href={project.link} className={`block group ${index === 0 ? 'md:col-span-2' : ''}`}>
                   <Card
-                    className="overflow-hidden hover:shadow-lg transition-shadow py-0 pb-6 h-full flex flex-col"
+                    className={`overflow-hidden border-border group-hover:border-primary/50 transition-all duration-300 py-0 pb-6 h-full flex flex-col ${index === 0 ? 'md:flex-row md:pb-0' : ''}`}
                   >
-                    <div className="aspect-video relative shrink-0">
+                    <div className={`relative shrink-0 bg-muted ${index === 0 ? 'md:w-3/5 aspect-[16/10]' : 'aspect-video'}`}>
                       <Image
                         src={project.images?.cover || "/images/placeholder.svg"}
                         alt={project.title}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
-                    <CardHeader className="flex-1">
-                      <CardTitle className="text-xl text-gray-900">
-                        {project.title}
-                      </CardTitle>
-                      <CardDescription className="text-gray-600 leading-relaxed">
-                        {project.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="mt-auto pt-0">
-                      <div className="flex flex-wrap gap-2">
-                        {project.techStack.map((tech, techIndex) => (
-                          <Badge
-                            key={techIndex}
-                            variant="secondary"
-                            className="bg-blue-100 text-blue-800"
-                          >
-                            {tech}
-                          </Badge>
-                        ))}
-                      </div>
-                    </CardContent>
+                    <div className={`flex flex-col flex-1 ${index === 0 ? 'md:p-8 justify-center' : ''}`}>
+                      <CardHeader className="flex-1">
+                        <CardTitle className="text-2xl text-foreground group-hover:text-primary transition-colors">
+                          {project.title}
+                        </CardTitle>
+                        <CardDescription className="text-muted-foreground leading-relaxed mt-2 text-base">
+                          {project.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent className="mt-auto pt-0">
+                        <div className="flex flex-wrap gap-2">
+                          {project.techStack.map((tech, techIndex) => (
+                            <Badge
+                              key={techIndex}
+                              variant="secondary"
+                            >
+                              {tech}
+                            </Badge>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </div>
                   </Card>
                 </Link>
               ))}
@@ -228,163 +209,93 @@ export default function HomePage() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-zinc-50 dark:bg-zinc-900/30">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
                 Get In Touch
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Ready to bring your mobile app idea to life? Let&#39;s discuss
-                your project and see how I can help you succeed.
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Ready to bring your mobile app idea to life? Let&#39;s discuss your project and see how I can help you succeed.
               </p>
             </div>
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Info */}
-              <div className="space-y-8">
-                <Card className="p-8">
-                  <CardHeader className="p-0 mb-6">
-                    <CardTitle className="text-2xl text-gray-900">
-                      Contact Information
-                    </CardTitle>
-                    <CardDescription className="text-gray-600">
-                      Feel free to reach out through any of these channels
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="p-0 space-y-6">
+            <div className="grid lg:grid-cols-5 gap-8">
+              {/* Info & Social */}
+              <div className="lg:col-span-2 space-y-6">
+                <Card className="p-8 border-border">
+                  <CardTitle className="text-2xl mb-2">Contact Info</CardTitle>
+                  <CardDescription className="mb-8">Feel free to reach out directly.</CardDescription>
+                  <div className="space-y-6">
                     <div className="flex items-center space-x-4">
-                      <div className="bg-blue-100 p-3 rounded-full">
-                        <Mail className="w-6 h-6 text-blue-600" />
+                      <div className="bg-primary/10 p-4 rounded-2xl">
+                        <Mail className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <p className="font-semibold text-gray-900">Email</p>
-                        <Link
-                          href="mailto:anhtuan03.MDev@gmail.com"
-                          className="text-blue-600 hover:underline"
-                        >
+                        <p className="text-sm font-semibold text-foreground">Email</p>
+                        <Link href="mailto:anhtuan03.MDev@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                           anhtuan03.MDev@gmail.com
                         </Link>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
-                      <div className="bg-blue-100 p-3 rounded-full">
-                        <MapPin className="w-6 h-6 text-blue-600" />
+                      <div className="bg-primary/10 p-4 rounded-2xl">
+                        <MapPin className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <p className="font-semibold text-gray-900">Location</p>
-                        <p className="text-gray-600">
-                          Viet Nam, TP. Ho Chi Minh
-                        </p>
+                        <p className="text-sm font-semibold text-foreground">Location</p>
+                        <p className="text-muted-foreground">Viet Nam, TP. Ho Chi Minh</p>
                       </div>
                     </div>
-                  </CardContent>
+                  </div>
                 </Card>
 
-                {/* Social */}
-                <Card className="p-8">
-                  <CardHeader className="p-0 mb-6">
-                    <CardTitle className="text-2xl text-gray-900">
-                      Connect With Me
-                    </CardTitle>
-                    <CardDescription className="text-gray-600">
-                      Follow my work and connect on social platforms
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="p-0">
-                    <div className="flex space-x-4">
-                      <Link
-                        href="https://github.com/anhtuanMDev"
-                        className="bg-gray-900 text-white p-4 rounded-full hover:bg-gray-800"
-                      >
-                        <Github className="w-6 h-6" />
-                      </Link>
-                      <Link
-                        href="https://www.linkedin.com/in/tu%E1%BA%A5n-nguy%E1%BB%85n-1ab336294/"
-                        className="bg-blue-600 text-white p-4 rounded-full hover:bg-blue-700"
-                      >
-                        <Linkedin className="w-6 h-6" />
-                      </Link>
-                      <Link
-                        href="mailto:anhtuan03.MDev@gmail.com"
-                        className="bg-red-500 text-white p-4 rounded-full hover:bg-red-600"
-                      >
-                        <Mail className="w-6 h-6" />
-                      </Link>
-                    </div>
-                  </CardContent>
+                <Card className="p-8 border-border">
+                  <CardTitle className="text-2xl mb-6">Connect</CardTitle>
+                  <div className="flex gap-4">
+                    <Link href="https://github.com/anhtuanMDev" className="bg-zinc-100 dark:bg-zinc-800 text-foreground p-4 rounded-2xl hover:bg-primary hover:text-primary-foreground transition-all">
+                      <Github className="w-6 h-6" />
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/tu%E1%BA%A5n-nguy%E1%BB%85n-1ab336294/" className="bg-[#0A66C2]/10 text-[#0A66C2] dark:bg-[#0A66C2]/20 p-4 rounded-2xl hover:bg-[#0A66C2] hover:text-white transition-all">
+                      <Linkedin className="w-6 h-6" />
+                    </Link>
+                  </div>
                 </Card>
               </div>
 
               {/* Form */}
-              <Card className="p-8">
-                <CardHeader className="p-0 mb-6">
-                  <CardTitle className="text-2xl text-gray-900">
-                    Send a Message
-                  </CardTitle>
-                  <CardDescription className="text-gray-600">
-                    Fill out the form below and I&#39;ll get back to you within
-                    24 hours
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-0">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">Full Name</Label>
-                        <Input
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          placeholder="Your full name"
-                          required
-                        />
+              <div className="lg:col-span-3">
+                <Card className="p-8 border-border h-full">
+                  <CardHeader className="p-0 mb-8">
+                    <CardTitle className="text-2xl">Send a Message</CardTitle>
+                    <CardDescription>I&#39;ll get back to you within 24 hours.</CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div className="grid sm:grid-cols-2 gap-6">
+                        <div className="space-y-3">
+                          <Label htmlFor="name" className="text-foreground">Full Name</Label>
+                          <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Your full name" required className="bg-background/50 h-12 rounded-xl" />
+                        </div>
+                        <div className="space-y-3">
+                          <Label htmlFor="email" className="text-foreground">Email</Label>
+                          <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="your.email@example.com" required className="bg-background/50 h-12 rounded-xl" />
+                        </div>
                       </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email</Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          placeholder="your.email@example.com"
-                          required
-                        />
+                      <div className="space-y-3">
+                        <Label htmlFor="subject" className="text-foreground">Subject</Label>
+                        <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="What's this about?" required className="bg-background/50 h-12 rounded-xl" />
                       </div>
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="subject">Subject</Label>
-                      <Input
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        placeholder="What's this about?"
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Message</Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder="Tell me about your project or question..."
-                        rows={6}
-                        required
-                      />
-                    </div>
-                    <Button
-                      type="submit"
-                      className="w-full bg-blue-600 hover:bg-blue-700"
-                    >
-                      <Send className="w-4 h-4 mr-2" /> Send Message
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
+                      <div className="space-y-3">
+                        <Label htmlFor="message" className="text-foreground">Message</Label>
+                        <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Tell me about your project..." rows={6} required className="bg-background/50 rounded-xl resize-none" />
+                      </div>
+                      <Button type="submit" size="lg" className="w-full rounded-xl text-base h-12">
+                        <Send className="w-4 h-4 mr-2" /> Send Message
+                      </Button>
+                    </form>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </section>
