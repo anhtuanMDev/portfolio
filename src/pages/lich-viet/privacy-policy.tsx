@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import type { ReactNode } from "react";
 
-// Nguồn: lich-viet/docs/privacy-policy.md – sửa ở đây thì sửa cả bên đó.
+// Nguồn: lich-viet/docs/privacy-policy.md - sửa ở đây thì sửa cả bên đó.
 // URL này khai báo trên Google Play và nằm trong màn Cài đặt của app.
 const EFFECTIVE_DATE = "03/10/2026";
 const DEVELOPER = "Alex Vin";
@@ -51,10 +51,10 @@ export default function LichVietPrivacyPolicy() {
   return (
     <>
       <Head>
-        <title>Chính sách quyền riêng tư – Lịch Việt</title>
+        <title>Chính sách quyền riêng tư - Lịch Việt</title>
         <meta
           name="description"
-          content="Chính sách quyền riêng tư của ứng dụng Lịch Việt – lịch âm dương, nhắc ngày giỗ."
+          content="Chính sách quyền riêng tư của ứng dụng Lịch Việt - lịch âm dương, nhắc ngày giỗ."
         />
       </Head>
 
@@ -86,13 +86,13 @@ export default function LichVietPrivacyPolicy() {
           </dl>
 
           <p className="mt-8 text-gray-700 leading-relaxed">
-            Lịch Việt là ứng dụng xem lịch dương – âm, ghi nhớ ngày giỗ, sinh nhật và nhắc lịch. Ứng
+            Lịch Việt là ứng dụng xem lịch dương - âm, ghi nhớ ngày giỗ, sinh nhật và nhắc lịch. Ứng
             dụng <strong>không có tài khoản, không có quảng cáo, không theo dõi người dùng</strong> và
             không có máy chủ riêng lưu dữ liệu của bạn. Tài liệu này giải thích dữ liệu nào được xử
             lý, ở đâu và vì sao.
           </p>
 
-          <Section title="1. Dữ liệu bạn nhập – chỉ nằm trên máy của bạn">
+          <Section title="1. Dữ liệu bạn nhập - chỉ nằm trên máy của bạn">
             <List>
               <li>
                 <strong>Sự kiện</strong> bạn tạo (tên, ngày âm/dương, kiểu lặp lại, số ngày nhắc
