@@ -97,4 +97,19 @@ export const projects: ProjectInfo[] = [
     techStack: ["React 19", "TypeScript", "Vite", "Cloudflare", "Legend State"],
     link: "/projects/seshat",
   },
+  {
+    id: 4,
+    title: "Lịch Việt",
+    status: "In Dev",
+    category: "React Native",
+    description:
+      "A Vietnamese lunar/solar calendar with death-anniversary reminders, home-screen widgets and offline-first privacy.",
+    images: {
+      cover: "/images/lich-viet/feature-graphic.png",
+      logo: "/images/lich-viet/logo.png",
+      gallery: [],
+    },
+    techStack: ["React Native", "TypeScript", "MMKV", "Firebase"],
+    link: "/lich-viet",
+  },
 ];
