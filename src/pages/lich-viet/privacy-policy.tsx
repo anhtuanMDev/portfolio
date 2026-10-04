@@ -124,7 +124,7 @@ export default function LichVietPrivacyPolicy() {
                 họ. Bạn có thể tắt sao lưu trong cài đặt của máy.
               </li>
               <li>
-                <strong>Xuất dữ liệu thủ công:</strong> khi bạn chọn &ldquo;Xuất dữ liệu&rdquo;, nội
+                <strong>Xuất dữ liệu thủ công:</strong> khi bạn chọn “Xuất dữ liệu”, nội
                 dung sự kiện được chuyển cho ứng dụng bạn chọn (Zalo, email, ghi chú…). Ứng dụng không
                 tự gửi đi đâu khác.
               </li>
@@ -139,7 +139,7 @@ export default function LichVietPrivacyPolicy() {
             <List>
               <li>
                 Dấu vết lỗi (vị trí lỗi trong mã nguồn), thời điểm xảy ra lỗi, nhãn kỹ thuật cho biết
-                lỗi xảy ra ở chức năng nào (ví dụ &ldquo;đồng bộ nhắc lịch&rdquo;).
+                lỗi xảy ra ở chức năng nào (ví dụ “đồng bộ nhắc lịch”).
               </li>
               <li>
                 Thông tin thiết bị: hãng và mẫu máy, phiên bản hệ điều hành, phiên bản ứng dụng, ngôn
@@ -169,7 +169,7 @@ export default function LichVietPrivacyPolicy() {
               </li>
               <li>
                 <strong>Tắt báo cáo lỗi:</strong> vào <strong>Cài đặt → Báo cáo lỗi</strong> và tắt
-                &ldquo;Gửi báo cáo lỗi&rdquo;. Sau khi tắt, ứng dụng không gửi báo cáo nào nữa.
+                “Gửi báo cáo lỗi”. Sau khi tắt, ứng dụng không gửi báo cáo nào nữa.
               </li>
               <li>
                 Tham khảo:{" "}
@@ -222,7 +222,7 @@ export default function LichVietPrivacyPolicy() {
                 trong tài khoản của mình).
               </li>
               <li>
-                Rút lại đồng ý gửi báo cáo lỗi: tắt &ldquo;Gửi báo cáo lỗi&rdquo; trong Cài đặt bất
+                Rút lại đồng ý gửi báo cáo lỗi: tắt “Gửi báo cáo lỗi” trong Cài đặt bất
                 cứ lúc nào.
               </li>
               <li>
